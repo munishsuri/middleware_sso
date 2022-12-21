@@ -1,0 +1,12 @@
+---
+applications:
+- name: myapp
+  routes:
+    - route: middleware_sso.cfapps.eu10.hana.ondemand.com
+  path: myapp
+  memory: 128M
+  buildpack: nodejs_buildpack
+  services:
+    - name: conn_principalpropagation
+    - name: dest_principalpropagation
+    - name: principalpropagation-xsuaa-service
